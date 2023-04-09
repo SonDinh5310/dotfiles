@@ -22,15 +22,15 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
 done
 
 # Look for DOT_FOLDER in the .env
-while IFS= read -r var; do
-  [[ $var =~ ^DOT_FOLDER.* ]] && PRESENT=true
-done < "$HOME/.env"
+# while IFS= read -r var; do
+#   [[ $var =~ ^DOT_FOLDER.* ]] && PRESENT=true
+# done < "$HOME/.env"
 
 # If not present, write the DOT_FOLDER var into the file
-if [[ $PRESENT == "false" ]]; then
-    echo "[+] Adding DOT_FOLDER to .env"
-    echo "DOT_FOLDER=$SCRIPT_DIR" >> $HOME/.env
-fi
+# if [[ $PRESENT == "false" ]]; then
+#     echo "[+] Adding DOT_FOLDER to .env"
+#     echo "DOT_FOLDER=$SCRIPT_DIR" >> $HOME/.env
+# fi
 
 # Reload shell once installed
 echo "[+] Reloading shell..."
