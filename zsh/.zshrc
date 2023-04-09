@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ll="ls -al --color=auto"
+alias python=/usr/bin/python3
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -113,5 +114,5 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
+
 fpath+=${ZDOTDIR:-~}/.zsh_functions
-alias python=/usr/bin/python3
