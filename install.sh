@@ -17,7 +17,7 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
     echo "[+] Folder :: $folder"
 
     stow -t $HOME -D $folder \
-        --ignore=README.md --ignore=LICENSE 
+        --ignore=README.md --ignore=LICENSE --ignore=./alacritty/themes
     stow -t $HOME $folder
 done
 
@@ -34,4 +34,5 @@ done
 
 # Reload shell once installed
 echo "[+] Reloading shell..."
+echo "[+] Please restart the terminal!"
 exec $SHELL -l
