@@ -3,210 +3,22 @@
 
 # Inserts a blank line between shell prompts
 add_newline = true
-
 command_timeout = 10000
+format="""$directory$nodejs$git_branch$git_commit$git_state$git_metrics$git_status\n$character"""
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
-# format = '[➜ ](bold green)'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 error_symbol = '[✖](bold red)'
 vimcmd_symbol = '[➜](bold green)'
-
-# Disable the module, hiding it from the prompt completely
-[package]
-disabled = true
 
 [nodejs]
 disabled = false
 format = '[$symbol($version )]($style)'
 version_format = '${raw}'
 
-[aws]
-disabled = true
-
-[azure]
-disabled = true
-
-[battery]
-disabled = true
-
-[buf]
-disabled = true
-
-[bun]
-disabled = true
-
-[c]
-disabled = true
-
-[cmake]
-disabled = true
-
-[cobol]
-disabled = true
-
-[cmd_duration]
-disabled = true
-
-[conda]
-disabled = true
-
-[container]
-disabled = true
-
-[crystal]
-disabled = true
-
-[daml]
-disabled = true
-
-[dart]
-disabled = true
-
-[deno]
-disabled = true
-
-[docker_context]
-disabled = true
-
-[dotnet]
-disabled = true
-
-[elixir]
-disabled = true
-
-[elm]
-disabled = true
-
-[env_var]
-disabled = true
-
-[erlang]
-disabled = true
-
-[fill]
-disabled = true
-
-[gcloud]
-disabled = true
-
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [git_metrics]
 disabled = false
-
-[golang]
-disabled = true
-
-[guix_shell]
-disabled = true
-
-[haskell]
-disabled = true
-
-[haxe]
-disabled = true
-
-[helm]
-disabled = true
-
-[hostname]
-disabled = true
-
-[java]
-disabled = true
-
-[julia]
-disabled = true
-
-[kotlin]
-disabled = true
-
-[localip]
-disabled = true
-
-[lua]
-disabled = true
-
-[meson]
-disabled = true
-
-[hg_branch]
-disabled = true
-
-[nim]
-disabled = true
-
-[nix_shell]
-disabled = true
-
-[ocaml]
-disabled = true
-
-[opa]
-disabled = true
-
-[openstack]
-disabled = true
-
-[perl]
-disabled = true
-
-[php]
-disabled = true
-
-[purescript]
-disabled = true
-
-[python]
-disabled = true
-
-[rlang]
-disabled = true
-
-[raku]
-disabled = true
-
-[red]
-disabled = true
-
-[ruby]
-disabled = true
-
-[rust]
-disabled = true
-
-[scala]
-disabled = true
-
-[shell]
-disabled = true
-
-[shlvl]
-disabled = true
-
-[singularity]
-disabled = true
-
-[spack]
-disabled = true
-
-[swift]
-disabled = true
-
-[vagrant]
-disabled = true
-
-[vlang]
-disabled = true
-
-[vcsh]
-disabled = true
-
-[zig]
-disabled = true
-
-
-

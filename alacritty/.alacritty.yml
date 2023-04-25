@@ -14,7 +14,7 @@ window:
 
     padding:
         x: 10
-        y: 10
+    #     y: 10
 
     decorations: none
 
@@ -35,22 +35,22 @@ font:
     # Normal (roman) font face
     normal:
         #family: CaskaydiaCove Nerd Font Mono
-        family: CaskaydiaCove Nerd Font Mono
-        style: Regular
+        family: JetBrainsMono Nerd Font
+        style: SemiBold
 
     # Bold font face
     bold:
-        family: CaskaydiaCove Nerd Font Mono
+        family: JetBrainsMono Nerd Font
         style: Bold
 
     # Italic font face
     italic:
-        family: CaskaydiaCove Nerd Font Mono
+        family: JetBrainsMono Nerd Font
         style: Italic
 
     # Bold italic font face
     bold_italic:
-        family: CaskaydiaCove Nerd Font Mono
+        family: JetBrainsMono Nerd Font
         style: Bold Italic
 
     size: 12.5

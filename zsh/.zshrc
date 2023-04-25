@@ -116,3 +116,4 @@ _fix_cursor() {
 precmd_functions+=(_fix_cursor)
 
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+fpath+=${ZDOTDIR:-~}/.zsh_functions
