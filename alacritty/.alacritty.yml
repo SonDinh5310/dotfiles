@@ -14,7 +14,7 @@ window:
 
     padding:
         x: 10
-    #     y: 10
+        y: 5
 
     decorations: none
 
@@ -53,7 +53,7 @@ font:
         family: JetBrainsMono Nerd Font
         style: Bold Italic
 
-    size: 12.5
+    size: 12
 
 draw_bold_text_with_bright_colors: false
 
