@@ -127,3 +127,6 @@ eval "$(starship init bash)"
 
 source ~/.bash_completion/alacritty
 source ~/.bash_completion/alacritty
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /home/jamesdinh/alacritty/extra/completions/alacritty.bash
+source ~/.bash_completion/alacritty

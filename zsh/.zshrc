@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fzf nvm npm yarn base16-shell zoxide zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git fzf zoxide zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,5 +114,4 @@ _fix_cursor() {
 }
 
 precmd_functions+=(_fix_cursor)
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
