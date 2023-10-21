@@ -1,12 +1,11 @@
 # Colors (One Dark)
-[colors]
     # Default colors
-    [primary]
+    [colors.primary]
         background= "0x1e2127"
         foreground= "0xabb2bf"
 
     # Normal colors
-    [normal]
+    [colors.normal]
         black= "0x1e2127"
         red= "0xe06c75"
         green= "0x98c379"
@@ -17,7 +16,7 @@
         white= "0xabb2bf"
 
     # Bright colors
-    [bright]
+    [colors.bright]
         black= "0x5c6370"
         red= "0xe06c75"
         green= "0x98c379"
