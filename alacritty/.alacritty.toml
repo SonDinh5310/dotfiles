@@ -17,12 +17,8 @@ title           = "Alacritty"
 columns = 90
 lines   = 40
 
-[window.padding]
-x = 10
-y = 0
-
 [colors]
-draw_bold_text_with_bright_colors = true
+draw_bold_text_with_bright_colors = false
 
 [font]
 builtin_box_drawing = true
