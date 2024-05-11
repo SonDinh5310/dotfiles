@@ -5,12 +5,13 @@ set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PRESENT=false
 
-DOT_FOLDERS="alacritty,bash,starship,zsh"
+DOT_FOLDERS="alacritty,bash,powerlevel10k,starship,zsh"
 
 echo "[+] Dotfiles :: $SCRIPT_DIR"
 
 if ! command -v stow &> /dev/null; then
-    sudo apt install -y stow
+    echo "Please install stow, then rerun the script!"
+    return
 fi
 
 for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do

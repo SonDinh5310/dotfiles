@@ -6,39 +6,40 @@ live_config_reload = true
 TERM = "xterm-256color"
 
 [window]
-decorations     = "none"
+decorations = "none"
 dynamic_padding = true
-dynamic_title   = true
-opacity         = 0.9
-startup_mode    = "Windowed"
-title           = "Alacritty"
+dynamic_title = true
+opacity = 0.9
+startup_mode = "Windowed"
+title = "Alacritty"
+padding = { x = 5 }
 
 [window.dimensions]
 columns = 90
-lines   = 40
+lines = 40
 
 [colors]
-draw_bold_text_with_bright_colors = false
+draw_bold_text_with_bright_colors = true
 
 [font]
 builtin_box_drawing = true
-size                = 12
+size = 12
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
-style  = "SemiBold"
+style = "Medium"
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
-style  = "Bold"
+style = "Bold"
 
 [font.bold_italic]
 family = "JetBrainsMono Nerd Font"
-style  = "BoldItalic"
+style = "BoldItalic"
 
 [font.italic]
 family = "JetBrainsMono Nerd Font"
-style  = "Italic"
+style = "Italic"
 
 [cursor]
 unfocused_hollow = false
@@ -52,3 +53,7 @@ blinking = "On"
 
 [mouse]
 hide_when_typing = false
+
+[keyboard]
+# Emulate ctrl + backspace on editor
+bindings = [{ key = "Back", mods = "Control", chars = "\u0017" }]
