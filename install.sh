@@ -5,7 +5,7 @@ set -e
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 PRESENT=false
 
-DOT_FOLDERS="alacritty,bash,powerlevel10k,starship,zsh"
+DOT_FOLDERS="alacritty,bash,powerlevel10k,zsh"
 
 echo "[+] Dotfiles :: $SCRIPT_DIR"
 
