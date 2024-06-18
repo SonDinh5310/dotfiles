@@ -1,0 +1,27 @@
+[core]
+    	pager = delta
+
+[include]
+     	path = ./themes.gitconfig
+
+[interactive]
+    	diffFilter = delta --color-only
+
+[delta]
+	features = arctic-fox
+	syntax-theme = OneHalfDark
+	navigate = true
+	line-numbers = true
+	plus-style = syntax "#003800"
+    	minus-style = syntax "#3f0001"
+
+[merge]
+    	conflictstyle = diff3
+
+[diff]
+    	colorMoved = default
+
+[blame]
+	pager = delta
+
+
