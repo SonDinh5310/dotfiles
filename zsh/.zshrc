@@ -60,6 +60,9 @@ _fix_cursor() {
 precmd_functions+=(_fix_cursor)
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
+# zsh autosuggestions setup
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
 # NVM setup
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
