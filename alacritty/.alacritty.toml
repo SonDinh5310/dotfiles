@@ -9,10 +9,11 @@ TERM = "xterm-256color"
 decorations = "none"
 dynamic_padding = true
 dynamic_title = true
-opacity = 0.9
-startup_mode = "Windowed"
+opacity = 0.8
+startup_mode = "Maximized"
 title = "Alacritty"
 padding = { x = 5, y = 1 }
+blur = true
 
 [window.dimensions]
 columns = 90
@@ -45,11 +46,16 @@ style = "Italic"
 unfocused_hollow = false
 
 [shell]
-program = "/bin/zsh"
+program = "/usr/bin/zsh"
+args = ["-l", "-c", "tmux a -t main || tmux new -s main"]
 
 [cursor.style]
 shape = "Beam"
 blinking = "On"
+
+[terminal]
+# Controls the OSC 52 behavior for clipboard interactions
+osc52 = "CopyPaste" # Default: "OnlyCopy"
 
 [mouse]
 hide_when_typing = false
