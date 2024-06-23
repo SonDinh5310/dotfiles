@@ -36,6 +36,7 @@ setopt hist_find_no_dups
 
 # Aliases
 alias ll="ls -al --color=auto"
+alias cat="bat"
 alias python=/usr/bin/python3
 
 # Completion styling
