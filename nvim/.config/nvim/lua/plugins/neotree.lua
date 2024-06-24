@@ -8,8 +8,18 @@ return {
     },
     config = function()
         require("neo-tree").setup({
+            popup_border_style = "rounded",
+            enable_git_status = true,
+            enable_diagnostics = true,
             window = {
                 position = "right",
+            },
+            filesystem = {
+                filtered_items = {
+                    hide_dotfiles = false,
+                    hide_gitignored = false,
+                    hide_hidden = false,
+                }
             }
         })
         vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>", {})
