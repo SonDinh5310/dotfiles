@@ -1,6 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
         local configs = require("nvim-treesitter.configs")
 
@@ -10,5 +11,5 @@ return {
             highlight = { enable = true },
             indent = { enable = true },
         })
-    end
+    end,
 }

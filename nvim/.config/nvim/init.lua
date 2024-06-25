@@ -14,4 +14,45 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
-require("lazy").setup("plugins")
+require("lazy").setup({
+    spec = {
+        { import = "plugins" },
+    },
+    ui = {
+        border = "rounded",
+        backdrop = 0,
+    },
+    performance = {
+        rtp = {
+            -- disable some rtp plugins
+            disabled_plugins = {
+                "2html_plugin",
+                "tohtml",
+                "getscript",
+                "getscriptPlugin",
+                "gzip",
+                "logipat",
+                "netrw",
+                "netrwPlugin",
+                "netrwSettings",
+                "netrwFileHandlers",
+                "matchit",
+                "tar",
+                "tarPlugin",
+                "rrhelper",
+                "spellfile_plugin",
+                "vimball",
+                "vimballPlugin",
+                "zip",
+                "zipPlugin",
+                "tutor",
+                "rplugin",
+                "syntax",
+                "synmenu",
+                "optwin",
+                "compiler",
+                "bugreport",
+            },
+        },
+    }
+})
