@@ -12,7 +12,7 @@ dynamic_title = true
 opacity = 0.95
 startup_mode = "Maximized"
 title = "Alacritty"
-padding = { x = 5, y = 1 }
+# padding = { x = 5, y = 1 }
 blur = true
 
 [window.dimensions]
