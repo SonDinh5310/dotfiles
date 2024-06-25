@@ -12,10 +12,7 @@ return {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.completion.spell,
-
-				require("none-ls.code_actions.eslint_d"),
-				require("none-ls.diagnostics.eslint_d"),
-				--require("none-ls.formatting.eslint_d"),
+				null_ls.builtins.diagnostics.eslint,
 			},
 
 			on_attach = function(current_client, bufnr)
