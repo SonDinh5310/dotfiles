@@ -1,12 +1,17 @@
 return {
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    config = function()
-        require("lualine").setup({
-            options = {
-                theme = "auto",
-            },
-        })
-    end,
+	"nvim-lualine/lualine.nvim",
+	event = "VeryLazy",
+	dependencies = { "nvim-tree/nvim-web-devicons" },
+	config = function()
+		require("lualine").setup({
+			options = {
+				theme = "onedark",
+				component_separators = { left = "", right = "" },
+				section_separators = { left = "", right = "" },
+			},
+			sections = {
+				lualine_x = { "filetype" },
+			},
+		})
+	end,
 }
