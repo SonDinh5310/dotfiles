@@ -8,6 +8,7 @@ return {
 				theme = "onedark",
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
+				disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
 			},
 			sections = {
 				lualine_x = { "filetype" },

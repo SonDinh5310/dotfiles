@@ -21,6 +21,9 @@ return {
 					hide_gitignored = false,
 					hide_hidden = false,
 				},
+				follow_current_file = {
+					enabled = true, -- this will find and focus the file in the active buffer every time
+				},
 			},
 		})
 		vim.keymap.set("n", "<C-n>", "<CMD>Neotree toggle<CR>", {})
