@@ -3,7 +3,11 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
+-- Increase spacing in sign column
 vim.opt.signcolumn = "yes:1"
+
+-- Set global status line for all window
+vim.opt.laststatus = 3
 
 -- Set <space> as the leader key
 vim.g.mapleader = " "
