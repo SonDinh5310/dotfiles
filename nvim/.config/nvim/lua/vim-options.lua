@@ -3,6 +3,9 @@ vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 
+-- Enable 24-bit RGB color in the TUI
+vim.opt.termguicolors = true
+
 -- Increase spacing in sign column
 vim.opt.signcolumn = "yes:1"
 
@@ -28,6 +31,9 @@ vim.opt.undofile = true
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Enable cursor blink
+vim.opt.guicursor = "n:blinkon200,i-ci-ve:ver25"
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })

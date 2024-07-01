@@ -22,7 +22,9 @@ return {
 			},
 		},
 		config = function()
-			require("telescope").setup({
+			local telescope = require("telescope")
+
+			telescope.setup({
 				defaults = {
 					layout_config = {
 						vertical = { width = 0.8 },
@@ -49,8 +51,8 @@ return {
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, {})
 
 			-- Enable Telescope extensions if they are installed
-			require("telescope").load_extension("fzf")
-			require("telescope").load_extension("ui-select")
+			telescope.load_extension("fzf")
+			telescope.load_extension("ui-select")
 		end,
 	},
 }
