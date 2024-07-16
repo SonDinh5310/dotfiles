@@ -38,6 +38,8 @@ setopt hist_find_no_dups
 alias ll="ls -al --color=auto"
 alias cat="bat"
 alias python=/usr/bin/python3
+alias codego="code --profile go"
+alias codereact="code --profile react"
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
