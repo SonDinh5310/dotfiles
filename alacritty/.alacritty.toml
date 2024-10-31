@@ -1,5 +1,5 @@
+[general]
 import = ["~/.dotfiles/alacritty/themes/one_dark.toml"]
-
 live_config_reload = true
 
 [env]
@@ -45,7 +45,7 @@ style = "Italic"
 [cursor]
 unfocused_hollow = false
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 args = ["-l", "-c", "tmux a -t main || tmux new-session -s main"]
 
