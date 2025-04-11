@@ -26,3 +26,5 @@
 	pager = delta
 
 
+[url "git@git.teko.vn:"]
+	insteadOf = https://git.teko.vn/

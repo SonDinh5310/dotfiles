@@ -16,7 +16,8 @@ plugins=(fzf fzf-tab zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# Shell integrations
+# Shell integration
+## Init zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
 # Keybindings
@@ -36,10 +37,19 @@ setopt hist_find_no_dups
 
 # Aliases
 alias ll="ls -al --color=auto"
-alias cat="bat"
+alias cat="bat --color=always"
+### Find & view content with fzf & bat
+alias llc="fzf | xargs cat"
+## Python
 alias python=/usr/bin/python3
+## Vscode
 alias codego="code --profile go"
 alias codereact="code --profile react"
+## Git
+### Find branch & checkout with fzf
+alias gcb='git branch --color | fzf --preview "git show --color=always {-1}" \
+                 --bind "enter:become(git checkout {-1})" \
+                 --height 40% --layout reverse'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -70,6 +80,28 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# EXPORTS
+## Golang setup
+export GO111MODULE=on
+export MOCKERY_PATH="/usr/bin/mockery"
+export BAZEL_PATH="/usr/bin/bazel"
+export JETBRAINS_TOOLBOX_PATH="$HOME/scripts"
+# export GOROOT=$HOME/go
+# export GOPATH=/usr/lib/go
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+# Export more path to app
+# export PATH="$PATH:$MOCKERY_PATH:$BAZEL_PATH:$JETBRAINS_TOOLBOX_PATH"
+
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude={.git,node_modules,.yarn,.next,dist,build,tmp}'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export XDG_CURRENT_DESKTOP="KDE"
+
+
+export PATH="$PATH:$MOCKERY_PATH:$BAZEL_PATH:$JETBRAINS_TOOLBOX_PATH:$GOROOT/bin:$GOPATH/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

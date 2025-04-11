@@ -125,6 +125,9 @@ eval "$(starship init bash)"
 
 . "$HOME/.cargo/env"
 
+export JETBRAINS_TOOLBOX_PATH="$HOME/scripts"
+export PATH="$PATH:$JETBRAINS_TOOLBOX_PATH"
+
 source ~/.bash_completion/alacritty
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source /home/jamesdinh/alacritty/extra/completions/alacritty.bash
