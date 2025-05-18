@@ -18,7 +18,7 @@ return {
 		},
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "cssls", "tailwindcss" },
+				ensure_installed = { "lua_ls", "ts_ls", "cssls", "tailwindcss" },
 			})
 		end,
 	},
@@ -72,9 +72,6 @@ return {
 						telemetry = { enable = false },
 					},
 				},
-			})
-			lspconfig.tsserver.setup({
-				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
 				capabilities = capabilities,

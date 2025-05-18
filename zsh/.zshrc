@@ -36,6 +36,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Aliases
+alias ls="eza"
 alias ll="eza -la -h --icons=auto --group-directories-first --no-user"
 alias cat="bat --color=always"
 ### Find & view content with fzf & bat
