@@ -53,6 +53,18 @@ alias goland="goland $1 > /dev/null 2>&1 &"
 alias gcb='git branch --color | fzf --preview "git show --color=always {-1}" \
                  --bind "enter:become(git checkout {-1})" \
                  --height 40% --layout reverse'
+alias gs='git status --short'
+alias gd='git diff'
+alias ga='git add'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gph='git push'
+alias gp='git pull'
+alias gl='git log'
+alias gb='git branch'
+alias gi='git init'
+alias gcl='git clone'
+alias gcp='git cherry-pick'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

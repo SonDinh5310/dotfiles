@@ -1,0 +1,47 @@
+theme = "onedarker"
+
+[editor]
+line-number = "relative"
+cursorline = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-progress-messages = true
+display-inlay-hints = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "┆"
+skip-levels = 1
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "separator",
+  "file-name",
+  "spinner",
+]
+center = ["workspace-diagnostics", "diagnostics"]
+right = [
+  "selections",
+  "position",
+  "read-only-indicator",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"

@@ -1,6 +1,14 @@
+
+
 [core]
     pager = delta
     editor = nvim
+    whitespace = error  # threat incorrect whitespace as errors
+    preloadindex = true  # preload index for faster status
+
+[status]
+    branch = true
+    showStash = true
 
 [include]
     path = ./themes.gitconfig
@@ -9,22 +17,28 @@
     diffFilter = delta --color-only
 
 [delta]
-	features = arctic-fox
+	features = chameleon
 	syntax-theme = OneHalfDark
 	navigate = true
 	line-numbers = true
 	plus-style = syntax "#003800"
-    minus-style = syntax "#3f0001"
+  minus-style = syntax "#3f0001"
 
 [merge]
     conflictstyle = diff3
 
 [diff]
     colorMoved = default
+    renames = copies
 
 [blame]
 	pager = delta
 
+[push]
+    autoSetupRemote = true
+
+[log]
+    abbrevCommit = true  # short commits
 
 [url "git@git.teko.vn:"]
 	insteadOf = https://git.teko.vn/
