@@ -42,7 +42,7 @@ alias cat="bat --color=always"
 ### Find & view content with fzf & bat
 alias llc="fzf | xargs cat"
 ## Python
-alias python=/usr/bin/python3
+alias python="/usr/bin/python3"
 ## Vscode
 alias codego="code --profile go"
 alias codereact="code --profile react"
@@ -56,11 +56,12 @@ alias gcb='git branch --color | fzf --preview "git show --color=always {-1}" \
 alias gs='git status --short'
 alias gd='git diff'
 alias ga='git add'
+alias gaa='git add --all'
 alias gc='git commit'
-alias gcm='git commit -m'
+alias gcmsg='git commit -m'
 alias gph='git push'
-alias gp='git pull'
-alias gl='git log'
+alias gpl='git pull'
+alias gl="git log --graph --pretty=format:'%C(auto)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cs) %C(bold blue)<%an>%Creset'"
 alias gb='git branch'
 alias gi='git init'
 alias gcl='git clone'

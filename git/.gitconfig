@@ -3,7 +3,6 @@
 [core]
     pager = delta
     editor = nvim
-    whitespace = error  # threat incorrect whitespace as errors
     preloadindex = true  # preload index for faster status
 
 [status]
@@ -22,10 +21,12 @@
 	navigate = true
 	line-numbers = true
 	plus-style = syntax "#003800"
-  minus-style = syntax "#3f0001"
+    minus-style = syntax "#3f0001"
+    hyperlinks = true
+    true-color = always
 
 [merge]
-    conflictstyle = diff3
+    conflictstyle = zdiff3
 
 [diff]
     colorMoved = default
