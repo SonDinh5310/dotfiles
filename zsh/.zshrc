@@ -66,6 +66,8 @@ alias gb='git branch'
 alias gi='git init'
 alias gcl='git clone'
 alias gcp='git cherry-pick'
+##Go-task
+alias task='go-task'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -140,9 +142,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --e
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export XDG_CURRENT_DESKTOP="KDE"
-
-
+export TASK_EXE="go-task"
 export PATH="$PATH:$MOCKERY_PATH:$BAZEL_PATH:$JETBRAINS_TOOLBOX_PATH:$GOROOT/bin:$GOPATH/bin"
+
+eval "$(task --completion zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
