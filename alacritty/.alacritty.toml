@@ -27,19 +27,23 @@ builtin_box_drawing = true
 size = 12
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "Maple Mono NF"
 style = "Medium"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "Maple Mono NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
-style = "BoldItalic"
+# family = "JetBrainsMono Nerd Font"
+family = "Maple Mono NF"
+style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+# family = "JetBrainsMono Nerd Font"
+family = "Maple Mono NF"
 style = "Italic"
 
 [cursor]

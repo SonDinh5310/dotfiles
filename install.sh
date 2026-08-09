@@ -19,7 +19,7 @@ for folder in $(echo $DOT_FOLDERS | sed "s/,/ /g"); do
 
     stow -t $HOME -D $folder \
         --ignore=README.md --ignore=LICENSE --ignore=./alacritty/themes
-    stow -t $HOME $folder
+    stow --adopt -t $HOME $folder
 done
 
 # Look for DOT_FOLDER in the .env

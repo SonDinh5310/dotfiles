@@ -40,14 +40,14 @@ alias ls="eza"
 alias ll="eza -la -h --icons=auto --group-directories-first --no-user"
 alias cat="bat --color=always"
 ### Find & view content with fzf & bat
-alias llc="fzf | xargs cat"
+alias llc="fzf | xargs bat --color=always"
 ## Python
 alias python="/usr/bin/python3"
 ## Vscode
 alias codego="code --profile go"
 alias codereact="code --profile react"
 ## Goland
-alias goland="goland $1 > /dev/null 2>&1 &"
+alias goland="goland > /dev/null 2>&1 &"
 ## Git
 ### Find branch & checkout with fzf
 alias gcb='git branch --color | fzf --preview "git show --color=always {-1}" \
