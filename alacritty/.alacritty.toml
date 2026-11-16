@@ -65,5 +65,10 @@ osc52 = "CopyPaste" # Default: "OnlyCopy"
 hide_when_typing = false
 
 [keyboard]
-# Emulate ctrl + backspace on editor
-bindings = [{ key = "Back", mods = "Control", chars = "\u0017" }]
+bindings = [
+  # Ctrl+Enter
+  { key = "Back", mods = "Control", chars = "\u0017" }, 
+  # Shift+Enter
+  { key = "Enter", mods = "Control", chars = "\u001b[27;5;13~" },
+  { key = "Enter", mods = "Shift",   chars = "\u001b[27;2;13~" },
+]
