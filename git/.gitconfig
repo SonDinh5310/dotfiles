@@ -42,4 +42,7 @@
     abbrevCommit = true  # short commits
 
 [url "git@git.teko.vn:"]
-	insteadOf = https://git.teko.vn/
+	  insteadOf = https://git.teko.vn/
+
+[credential]
+	  helper = libsecret
