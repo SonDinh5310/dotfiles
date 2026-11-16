@@ -68,6 +68,8 @@ alias gcl='git clone'
 alias gcp='git cherry-pick'
 ##Go-task
 alias task='go-task'
+##Time
+alias time='/usr/bin/time'
 
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -99,31 +101,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## Auto load node version if .nvmrc exists
-autoload -U add-zsh-hook
-
-load-nvmrc() {
-  local nvmrc_path
-  nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version
-    nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$(nvm version)" ]; then
-      nvm use
-    fi
-  elif [ -n "$(PWD=$OLDPWD nvm_find_nvmrc)" ] && [ "$(nvm version)" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
 # EXPORTS
 ## Golang setup
 export GO111MODULE=on
@@ -145,7 +122,14 @@ export XDG_CURRENT_DESKTOP="KDE"
 export TASK_EXE="go-task"
 export PATH="$PATH:$MOCKERY_PATH:$BAZEL_PATH:$JETBRAINS_TOOLBOX_PATH:$GOROOT/bin:$GOPATH/bin"
 
+## Load go-task description
 eval "$(task --completion zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/teko/google-cloud-sdk/path.zsh.inc' ]; then . '/home/teko/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/teko/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/teko/google-cloud-sdk/completion.zsh.inc'; fi
